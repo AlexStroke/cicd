@@ -11,6 +11,7 @@ on:
 
       # Not part of the workspace
       - '!wasm/**'
+   workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
