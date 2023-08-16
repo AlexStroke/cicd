@@ -1,6 +1,7 @@
 name: I2::Dev::Tests
 
 on:
+  workflow_dispatch:
   pull_request:
     branches: [iroha2-dev]
     paths:
@@ -8,10 +9,7 @@ on:
       - '**.json'
       - '**.toml'
       - '.github/workflows/**.yml'
-
-      # Not part of the workspace
       - '!wasm/**'
-   workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
